@@ -11,7 +11,7 @@ class Overview extends Component {
       <div id="task-container">
         <ul className="task-list">
           {tasks.map((task, i) => {
-            return <li id={i}>{task}</li>;
+            return <li key={i}>{task}</li>;
           })}
         </ul>
       </div>

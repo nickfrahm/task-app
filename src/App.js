@@ -17,14 +17,13 @@ class App extends Component {
   handleChange(event) {
     this.setState({
       task: event.target.value,
-      tasks: this.state.tasks,
     });
   }
 
   handleSubmit(event) {
     event.preventDefault();
     this.setState({
-      tasks: this.state.tasks.push(this.state.task),
+      tasks: [...this.state.tasks, this.state.task],
       task: '',
     });
   }
